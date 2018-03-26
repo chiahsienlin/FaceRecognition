@@ -1,0 +1,8 @@
+SET(GCC_COVERAGE_COMPILE_FLAGS "-std=c++11")
+cmake_minimum_required(VERSION 2.8)
+project( FaceDetection )
+find_package( OpenCV )
+include_directories( ${OpenCV_INCLUDE_DIRS})
+include_directories(../eigen_dir)
+add_executable( FaceDetection FaceDetection.cpp)
+target_link_libraries( FaceDetection ${OpenCV_LIBS} )
